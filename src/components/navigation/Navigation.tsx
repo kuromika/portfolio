@@ -48,7 +48,7 @@ export const Navigation = (): JSX.Element => {
 
 export const NavAnchors = () => {
     return (
-        <ul className="flex flex-col border-black border-2  absolute sm:static sm:flex-row sm:border-none ">
+        <ul className="flex flex-col border-black border-2 absolute sm:static sm:flex-row sm:border-none">
             <NavAnchor href="#top" text="Top"></NavAnchor>
             <div className="sm:ml-auto sm:flex gap-2 items-center">
             <NavAnchor href="#about" text="About me"></NavAnchor>
