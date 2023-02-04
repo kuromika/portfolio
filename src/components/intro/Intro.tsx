@@ -1,9 +1,22 @@
+import { useState } from "react";
 
 export const Intro = () => {
 
+    const [name, setName] = useState('Jean Alvarez');
+
+
+    const handleHover = () => {
+        setName('Kuromika');
+    }
+
+    const handleLeave = () => {
+        setName('Jean Alvarez');
+    }
+
+
     return (
-        <div className="h-screen flex items-center justify-center">
-            <h1 className="font-bold text-xl text-center">Jean Alvarez<span className="block sm:ml-7">Full-stack developer</span></h1>
+        <div id='intro' className="h-screen snap-start snap-always flex items-center justify-center sm:justify-start sm:ml-[10%]">
+            <h1 className="font-bold text-lg text-center uppercase sm:text-4xl sm:text-left"><span onMouseOver={handleHover} onMouseLeave={handleLeave}>{name}</span><span className="block sm:ml-20">full-stack developer</span></h1>
         </div>
     )
 }
