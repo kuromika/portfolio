@@ -5,7 +5,7 @@ import { Navigation } from "@/components/navigation/Navigation";
 export default function Home() {
   return (
     <div className="overflow-y-auto bg-[#F2F2F2]">
-      <header className="bg-white/30 fixed top-0 w-screen">
+      <header className="bg-white/30 fixed top-0 w-screen z-10">
         <Navigation></Navigation>
       </header>
 
