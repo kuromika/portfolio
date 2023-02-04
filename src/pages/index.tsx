@@ -1,18 +1,20 @@
 import { Intro } from "@/components/intro/Intro";
 import { Navigation } from "@/components/navigation/Navigation";
+import { Petal } from "@/components/rain/Petal";
+import { Rain } from "@/components/rain/Rain";
 
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <header className="bg-[#F2F2F2]">
+    <div className="min-h-screen flex flex-col bg-[#F2F2F2]">
+      <header className="bg-white/30 fixed top-0 w-screen">
         <Navigation></Navigation>
-
       </header>
 
-      <main className="bg-[#F2F2F2] flex flex-col flex-1">
+      <main className="flex flex-col overflow-x-hidden">
 
         <Intro></Intro>
+        <Rain></Rain>
 
         <section className="">
           <h2>About me</h2>
