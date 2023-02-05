@@ -1,6 +1,10 @@
+import { DivergenceMeter } from "@/components/3d/DivergenceMeter";
 import { About } from "@/components/about/About";
 import { Intro } from "@/components/intro/Intro";
 import { Navigation } from "@/components/navigation/Navigation";
+import { Html, useProgress } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -9,10 +13,12 @@ export default function Home() {
         <Navigation></Navigation>
       </header>
 
+
       <main className="h-screen scroll-p-10 snap-y snap-mandatory overflow-y-auto sm:scroll-p-0">
         <Intro></Intro>
         <About></About>
       </main>
+
     </div >
   )
 }
