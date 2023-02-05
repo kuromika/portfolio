@@ -13,8 +13,6 @@ export const DivInview = (props: PropsWithChildren) => {
   const controls = useAnimation();
 
   useEffect(() => {
-    console.log(isInView);
-
     if (isInView) {
       controls.start("visible");
     } else {

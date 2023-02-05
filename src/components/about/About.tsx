@@ -7,8 +7,8 @@ export const About = () => {
         id="about"
         className="flex h-screen snap-start snap-always flex-col items-center justify-center gap-10 p-7"
       >
-        <div className="text-black/80 md:w-[80%] md:text-xl">
-          <h2 className="mb-5 text-2xl font-semibold text-black after:block after:h-1 after:w-10 after:bg-black/70 after:content-[''] md:text-3xl">
+        <div className="md:w-[80%] md:text-xl">
+          <h2 className="mb-5 text-2xl font-semibold after:block after:h-1 after:w-10 after:bg-black/70 after:content-[''] md:text-3xl">
             About me:
           </h2>
           <p>

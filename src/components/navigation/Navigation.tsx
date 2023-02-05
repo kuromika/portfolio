@@ -53,9 +53,9 @@ export const NavAnchors = () => {
       initial={{ opacity: 0 }}
       transition={{ duration: 1, ease: "linear" }}
     >
-      <ul className={clsx("absolute flex flex-col border-2 border-b-2 sm:static sm:ml-5 sm:flex-row sm:border-none",
-        { 'border-r-black border-b-black': theme === 'light' },
-      {'border-r-white, border-b-white' : theme === 'dark'})}>
+      <ul className={clsx("absolute flex flex-col border-r-2 border-b-2 sm:static sm:ml-5 sm:flex-row sm:border-none",
+        { 'border-r-black/50 border-b-black/50': theme === 'light' },
+      {'border-r-white/50, border-b-white/50' : theme === 'dark'})}>
         <NavAnchor href="#intro" text="Top"></NavAnchor>
         <div className="items-center sm:ml-auto sm:mr-5 sm:flex">
           <NavAnchor href="#about" text="About me"></NavAnchor>

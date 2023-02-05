@@ -1,6 +1,7 @@
-import { Center } from "@react-three/drei";
+import { ThemeContext } from "@/lib/context/ThemeContext";
+import { Center, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { DivergenceMeter } from "../3d/DivergenceMeter";
 import { DivInview } from "../animations/DivInview";
 
@@ -11,6 +12,7 @@ type LinkedName = null | {
 
 export const Intro = () => {
   const [name, setName] = useState("Jean Alvarez");
+  const theme = useContext(ThemeContext);
 
   useEffect(() => {
     const first: LinkedName = { name: "Jean Alvarez", next: null };
@@ -35,21 +37,22 @@ export const Intro = () => {
     <DivInview>
       <div
         id="intro"
-        className="flex h-screen snap-start snap-always flex-col items-center justify-center sm:ml-[10%] sm:justify-start md:flex-row"
+        className="flex h-screen snap-start snap-always items-center justify-center flex-col"
       >
-        <h1 className="text-center text-lg font-bold uppercase sm:text-left sm:text-4xl">
+        <h1 className="text-center text-lg font-bold uppercase sm:text-left sm:text-3xl">
           <span aria-hidden="true">{name}</span>
           <span className="sr-only">Jean Alvarez</span>
-          <span className="block sm:ml-20">full-stack developer</span>
+          <span className="block mt-3 sm:ml-20">full-stack developer</span>
         </h1>
-        <div className="h-[40%] w-[90%] md:h-[60%] md:w-[80%]">
-          <Canvas camera={{ fov: 5, zoom: 1, near: 0.1, far: 1000 }}>
-            <ambientLight intensity={1}>
-              <directionalLight />
+        <div className="w-[99vw] h-[25vh] sm:h-[40vh]">
+          <Canvas camera={{ fov: 3, zoom: 1, near: 0.1, far: 1000 }}>
+            <OrbitControls autoRotate={true} />
+            <ambientLight intensity={0.5}>
+              <directionalLight color={'white'} intensity={theme === 'dark' ? 0.3 : 0} />
               <Center>
-                <DivergenceMeter></DivergenceMeter>
+                  <DivergenceMeter></DivergenceMeter>
               </Center>
-            </ambientLight>
+              </ambientLight>
           </Canvas>
         </div>
       </div>
