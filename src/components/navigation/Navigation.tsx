@@ -8,6 +8,8 @@ import { Anchors } from "./Anchors";
 type NavigationProps = {
   intro: RefObject<HTMLDivElement>
   about: RefObject<HTMLElement>
+  projects: RefObject<HTMLDivElement>
+
   setTheme: (mode: ThemeType) => void
 }
 
@@ -21,12 +23,13 @@ export const Navigation = (props: NavigationProps): JSX.Element => {
   
   const scrollTo = (ref: RefObject<HTMLDivElement | HTMLElement>) => {
      return function scroll() {
-      ref.current?.scrollIntoView();
+      ref.current?.scrollIntoView({block:'start'});
     }
   }
 
   const scrollToIntro = scrollTo(props.intro);
   const scrollToAbout = scrollTo(props.about);
+  const scrollToProjects = scrollTo(props.projects);
 
 
   useEffect(() => {
@@ -36,7 +39,7 @@ export const Navigation = (props: NavigationProps): JSX.Element => {
   }, [windowDimensions]);
 
 
-  const anchors = <Anchors intro={scrollToIntro} about={scrollToAbout}></Anchors>
+  const anchors = <Anchors intro={scrollToIntro} about={scrollToAbout} projects={scrollToProjects}></Anchors>
 
   return (
     <nav className="pl-5 sm:pl-10 sm:pr-10">

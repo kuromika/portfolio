@@ -1,14 +1,19 @@
-import { forwardRef } from "react";
+import { ThemeContext } from "@/lib/context/ThemeContext";
+import clsx from "clsx";
+import { forwardRef, useContext } from "react";
 import { DivInview } from "../animations/DivInview";
 
-export const About = forwardRef<HTMLElement>( function About(props, ref){
+export const About = forwardRef<HTMLElement>(function About(props, ref) {
+  
+  const theme = useContext(ThemeContext);
+
   return (
     <DivInview>
       <section ref={ref}
         id="about"
-        className="flex h-screen snap-center snap-always flex-col items-center justify-center p-7"
+        className="flex h-screen snap-start snap-always flex-col items-center pl-5 pr-5 justify-center"
       >
-        <div className="md:w-[80%] md:text-xl flex flex-col">
+        <div className="md:w-[80%] md:text-xl flex flex-col ">
           <h2 className="mb-5 text-xl font-semibold after:block after:h-1 after:w-10 after:bg-black/70 after:content-[''] md:text-4xl">
             About me:
           </h2>

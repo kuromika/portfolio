@@ -10,4 +10,14 @@
       "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
       "Helvetica Neue", sans-serif;
   }
+
+  .section-white{
+     background-size: 50px 50px;
+     background-image: radial-gradient(circle, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0) 1px);
+  }
+
+  .section-black{
+    background-size: 50px 50px;
+    background-image: radial-gradient(circle, #FF4637 0.5px, rgba(0, 0, 0, 1) 1px);
+  }
 }

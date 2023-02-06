@@ -7,6 +7,7 @@ import { ThemeContext } from "@/lib/context/ThemeContext";
 type AnchorsProps = {
   intro: () => void
   about: () => void
+  projects: () => void
 }
 
 export const Anchors = (props: AnchorsProps) => {
@@ -24,7 +25,7 @@ export const Anchors = (props: AnchorsProps) => {
         <NavAnchor onclick={props.intro} text="Top"></NavAnchor>
         <div className="items-center sm:ml-auto sm:mr-5 sm:flex">
           <NavAnchor onclick={props.about} text="About me"></NavAnchor>
-          <NavAnchor  text="Projects"></NavAnchor>
+          <NavAnchor  onclick={props.projects} text="Projects"></NavAnchor>
           <NavAnchor  text="Contact"></NavAnchor>
         </div>
       </ul>
