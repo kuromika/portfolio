@@ -8,7 +8,10 @@ const variants = {
 
 export const DivInview = (props: PropsWithChildren) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { margin: "-100px 0px -100px 0px", once:true });
+  const isInView = useInView(ref, {
+    margin: "-100px 0px -100px 0px",
+    once: true,
+  });
   const controls = useAnimation();
 
   useEffect(() => {

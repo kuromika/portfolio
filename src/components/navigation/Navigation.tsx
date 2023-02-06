@@ -6,12 +6,12 @@ import { ThemeType } from "@/lib/context/ThemeContext";
 import { Anchors } from "./Anchors";
 
 type NavigationProps = {
-  intro: RefObject<HTMLDivElement>
-  about: RefObject<HTMLElement>
-  projects: RefObject<HTMLDivElement>
+  intro: RefObject<HTMLDivElement>;
+  about: RefObject<HTMLElement>;
+  projects: RefObject<HTMLDivElement>;
 
-  setTheme: (mode: ThemeType) => void
-}
+  setTheme: (mode: ThemeType) => void;
+};
 
 export const Navigation = (props: NavigationProps): JSX.Element => {
   const windowDimensions = useWindowDimensions();
@@ -20,17 +20,16 @@ export const Navigation = (props: NavigationProps): JSX.Element => {
   const handleMenuClick = () => {
     setHasMenu((prev) => !prev);
   };
-  
+
   const scrollTo = (ref: RefObject<HTMLDivElement | HTMLElement>) => {
-     return function scroll() {
-      ref.current?.scrollIntoView({block:'start'});
-    }
-  }
+    return function scroll() {
+      ref.current?.scrollIntoView({ block: "start" });
+    };
+  };
 
   const scrollToIntro = scrollTo(props.intro);
   const scrollToAbout = scrollTo(props.about);
   const scrollToProjects = scrollTo(props.projects);
-
 
   useEffect(() => {
     if (windowDimensions !== undefined) {
@@ -38,8 +37,13 @@ export const Navigation = (props: NavigationProps): JSX.Element => {
     }
   }, [windowDimensions]);
 
-
-  const anchors = <Anchors intro={scrollToIntro} about={scrollToAbout} projects={scrollToProjects}></Anchors>
+  const anchors = (
+    <Anchors
+      intro={scrollToIntro}
+      about={scrollToAbout}
+      projects={scrollToProjects}
+    ></Anchors>
+  );
 
   return (
     <nav className="pl-5 sm:pl-10 sm:pr-10">
@@ -62,5 +66,3 @@ export const Navigation = (props: NavigationProps): JSX.Element => {
     </nav>
   );
 };
-
-

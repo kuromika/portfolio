@@ -6,10 +6,9 @@ type LinkedName = null | {
 };
 
 export const Name = () => {
+  const [name, setName] = useState("Jean Alvarez");
 
-    const [name, setName] = useState("Jean Alvarez");
-    
-    useEffect(() => {
+  useEffect(() => {
     const first: LinkedName = { name: "Jean Alvarez", next: null };
 
     const second: LinkedName = { name: "Kuromika", next: first };
@@ -26,13 +25,13 @@ export const Name = () => {
     }, 2000);
 
     return () => clearInterval(interval);
-    }, []);
-    
-    return (
-         <h1 className="text-center text-2xl font-bold uppercase sm:text-left sm:text-3xl md:text-4xl lg:text-5xl">
-          <span aria-hidden="true">{name}</span>
-          <span className="sr-only">Jean Alvarez</span>
-          <span className="block mt-3 sm:ml-20">full-stack developer</span>
-        </h1>
-    )
-}
+  }, []);
+
+  return (
+    <h1 className="text-center text-2xl font-bold uppercase sm:text-left sm:text-3xl md:text-4xl lg:text-5xl">
+      <span aria-hidden="true">{name}</span>
+      <span className="sr-only">Jean Alvarez</span>
+      <span className="mt-3 block sm:ml-20">full-stack developer</span>
+    </h1>
+  );
+};
