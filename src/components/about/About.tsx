@@ -1,14 +1,15 @@
+import { forwardRef } from "react";
 import { DivInview } from "../animations/DivInview";
 
-export const About = () => {
+export const About = forwardRef<HTMLElement>( function About(props, ref){
   return (
     <DivInview>
-      <section
+      <section ref={ref}
         id="about"
-        className="flex h-screen snap-start snap-always flex-col items-center justify-center gap-10 p-7"
+        className="flex h-screen snap-center snap-always flex-col items-center justify-center p-7"
       >
-        <div className="md:w-[80%] md:text-xl">
-          <h2 className="mb-5 text-2xl font-semibold after:block after:h-1 after:w-10 after:bg-black/70 after:content-[''] md:text-3xl">
+        <div className="md:w-[80%] md:text-xl flex flex-col">
+          <h2 className="mb-5 text-xl font-semibold after:block after:h-1 after:w-10 after:bg-black/70 after:content-[''] md:text-4xl">
             About me:
           </h2>
           <p>
@@ -18,15 +19,33 @@ export const About = () => {
             constantly seeking out new challenges and opportunities to improve
             my craft.
           </p>{" "}
-          <p className="mt-3">
+          <p className="mt-3 sm:mt-5">
             {" "}
-            When I am not coding, I like to immerse myself in the eclectic world
-            of Japanese math rock and shoegaze music, drawing inspiration from
+            When I am not coding, I like to immerse myself in the world
+            of math rock and shoegaze, drawing inspiration from
             their complex rhythms and ethereal soundscapes.{" "}
           </p>
-          <ul></ul>
+          <div className="flex justify-between  mt-5 sm:mt-14">
+            <div className="flex flex-col gap-2">
+              <h3 className="text-base font-semibold sm:text-2xl uppercase">Front-end</h3>
+              <ul>
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Tailwind</li>
+                <li>Next.js</li>
+              </ul>
+            </div>
+            <div className="flex flex-col gap-2">
+              <h3 className="text-base font-semibold sm:text-2xl uppercase">Back-end</h3>
+              <ul>
+                <li>Express</li>
+                <li>MongoDB</li>
+                <li>Firebase</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
     </DivInview>
   );
-};
+});

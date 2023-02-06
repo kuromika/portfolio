@@ -1,19 +1,32 @@
 import { useWindowDimensions } from "@/lib/hooks/useWindowDimensions";
 import { mdiMenu } from "@mdi/js";
 import Icon from "@mdi/react";
-import { useContext, useEffect, useState } from "react";
-import { NavAnchor } from "./NavAnchor";
-import { motion } from "framer-motion";
-import { ThemeContext, ThemeType } from "@/lib/context/ThemeContext";
-import clsx from "clsx";
+import { RefObject, useContext, useEffect, useState } from "react";
+import { ThemeType } from "@/lib/context/ThemeContext";
+import { Anchors } from "./Anchors";
 
-export const Navigation = (props: {setTheme: (mode: ThemeType) => void}): JSX.Element => {
+type NavigationProps = {
+  intro: RefObject<HTMLDivElement>
+  about: RefObject<HTMLElement>
+  setTheme: (mode: ThemeType) => void
+}
+
+export const Navigation = (props: NavigationProps): JSX.Element => {
   const windowDimensions = useWindowDimensions();
   const [hasMenu, setHasMenu] = useState(false);
 
   const handleMenuClick = () => {
     setHasMenu((prev) => !prev);
   };
+  
+  const scrollTo = (ref: RefObject<HTMLDivElement | HTMLElement>) => {
+     return function scroll() {
+      ref.current?.scrollIntoView();
+    }
+  }
+
+  const scrollToIntro = scrollTo(props.intro);
+  const scrollToAbout = scrollTo(props.about);
 
 
   useEffect(() => {
@@ -22,8 +35,11 @@ export const Navigation = (props: {setTheme: (mode: ThemeType) => void}): JSX.El
     }
   }, [windowDimensions]);
 
+
+  const anchors = <Anchors intro={scrollToIntro} about={scrollToAbout}></Anchors>
+
   return (
-    <nav className="">
+    <nav className="pl-5 sm:pl-10 sm:pr-10">
       {windowDimensions.width! < 640 ? (
         <>
           <button
@@ -35,34 +51,13 @@ export const Navigation = (props: {setTheme: (mode: ThemeType) => void}): JSX.El
             <Icon path={mdiMenu} className="w-5"></Icon>
             Menu
           </button>
-          {hasMenu && <NavAnchors></NavAnchors>}
+          {hasMenu && anchors}
         </>
       ) : (
-        <NavAnchors></NavAnchors>
+        anchors
       )}
     </nav>
   );
 };
 
-export const NavAnchors = () => {
-  const theme = useContext(ThemeContext);
-  
-  return (
-    <motion.div
-      animate={{ opacity: 1 }}
-      initial={{ opacity: 0 }}
-      transition={{ duration: 1, ease: "linear" }}
-    >
-      <ul className={clsx("absolute flex flex-col border-r-2 border-b-2 sm:static sm:ml-5 sm:flex-row sm:border-none",
-        { 'border-r-black/50 border-b-black/50': theme === 'light' },
-      {'border-r-white/50, border-b-white/50' : theme === 'dark'})}>
-        <NavAnchor href="#intro" text="Top"></NavAnchor>
-        <div className="items-center sm:ml-auto sm:mr-5 sm:flex">
-          <NavAnchor href="#about" text="About me"></NavAnchor>
-          <NavAnchor href="#projects" text="Projects"></NavAnchor>
-          <NavAnchor href="#contact" text="Contact"></NavAnchor>
-        </div>
-      </ul>
-    </motion.div>
-  );
-};
+

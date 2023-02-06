@@ -14,7 +14,7 @@ export const SwitchTheme = (props: {setTheme : (mode: ThemeType) => void}) => {
     }
     
     return (
-        <div className="flex items-center fixed z-10 bottom-0 ml-5 mb-5 gap-2">
+        <div className="flex items-center fixed z-10 gap-2 top-4 right-4 sm:bottom-10 sm:right-10 sm:top-auto">
             <button type="button" aria-label="Set dark mode" className={clsx('uppercase', {'text-black/60': theme === 'light'}, {'text-white': theme === 'dark'})} onClick={handleSwitchTheme}> Dark </button>
             <span aria-hidden='true'>/</span>
             <button type='button' aria-label="Set light mode" className={clsx('uppercase', {'text-white/60': theme === 'dark'},{'text-black': theme ==='light'} )} onClick={handleSwitchTheme}> Light </button>
