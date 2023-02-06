@@ -26,7 +26,6 @@ export default function Home() {
             "bg-white/30": theme === "light",
           })}
         >
-          <SwitchTheme setTheme={setTheme}></SwitchTheme>
 
           <Navigation
             intro={intro}
@@ -34,6 +33,9 @@ export default function Home() {
             projects={projects}
             setTheme={setTheme}
           ></Navigation>
+
+          <SwitchTheme setTheme={setTheme}></SwitchTheme>
+
         </header>
         <main className="h-screen snap-y snap-mandatory scroll-p-10 overflow-y-auto scroll-smooth sm:scroll-p-0">
           <Intro ref={intro}></Intro>

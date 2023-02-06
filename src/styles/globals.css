@@ -11,13 +11,18 @@
       "Helvetica Neue", sans-serif;
   }
 
+  body{
+    overflow-y: hidden;
+  }
+
   .section-white {
     background-size: 50px 50px;
     background-image: radial-gradient(
       circle,
       rgba(0, 0, 0, 0.5) 1px,
-      rgba(0, 0, 0, 0) 1px
+      rgba(242, 242, 242, 1) 1px
     );
+    transition: all 1s ease-in-out;
   }
 
   .section-black {
