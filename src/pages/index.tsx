@@ -7,6 +7,7 @@ import clsx from "clsx";
 import { SwitchTheme } from "@/components/theme/SwitchTheme";
 import { Projects } from "@/components/projects/Projects";
 import { Contact } from "@/components/Contact/Contact";
+import Head from "next/head";
 
 export default function Home() {
   const [theme, setTheme] = useState<ThemeType>("dark");
@@ -17,6 +18,15 @@ export default function Home() {
 
   return (
     <ThemeContext.Provider value={theme}>
+      <Head>
+        <title>Kuromika - Portfolio</title>
+        <link href="/cat.ico" rel="shortcut icon"></link>
+        <meta property="og:title" content="Kuromika Portfolio" key="title" />
+        <meta lang="en"/>
+        <meta name="description" content="Kuromika's Portfolio"/>
+        <meta name="author" content="Jean Alvarez"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      </Head>
       <div
         className={clsx("section-white overflow-y-auto text-black", {
           "section-black text-white": theme == "dark",
