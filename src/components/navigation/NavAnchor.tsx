@@ -11,8 +11,8 @@ export const NavAnchor = (props: { onclick?: () => void; text: string }) => {
         onClick={props.onclick}
         tabIndex={0}
         className={clsx(
-          "block cursor-pointer p-3 font-semibold transition-colors duration-300 ease-linear sm:pl-5 sm:pr-5",
-          { " text-black hover:bg-black hover:text-white": theme === "light" },
+          "block cursor-pointer p-3 font-semibold transition-colors duration-300 ease-linear sm:pl-5 sm:pr-5 bg-black",
+          { " text-black hover:bg-black hover:text-white bg-white": theme === "light" },
           {
             " text-white hover:bg-[#F2F2F2]/90 hover:text-black":
               theme === "dark",
