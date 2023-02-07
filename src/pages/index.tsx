@@ -36,7 +36,8 @@ export default function Home() {
         <meta name="twitter:site" content="@Kuromika__" />
         <meta name="twitter:title" content="Kuromika Portfolio" />
         <meta name="twitter:description" content="Kuromika - Full-Stack Developer"/>
-        <meta name="twitter:image" content="https://kuromika.vercel.com/ogimage2.jpg"/>
+        <meta name="twitter:image" content="https://kuromika.vercel.app/ogimage2.jpg"/>
+        <meta name="twitter:image:alt" content="Kuromika's Portfolio Banner"></meta>
 
       </Head>
       <div
