@@ -22,8 +22,8 @@ export default function Home() {
         })}
       >
         <header
-          className={clsx("fixed top-0  w-screen", {
-            "bg-white/30": theme === "light",
+          className={clsx("fixed top-0  w-screen z-10 bg-white/70", {
+            "bg-black/70": theme === "dark",
           })}
         >
 
