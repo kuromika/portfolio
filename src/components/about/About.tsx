@@ -45,7 +45,6 @@ export const About = forwardRef<HTMLElement>(function About(props, ref) {
             <div className="h-[30vw] w-[100%] sm:h-[30vh] lg:h-[40vh] lg:w-[40vw] xl:w-[40vw]">
               <Canvas camera={{ fov: 40, zoom: 1, near: 0.1, far: 1000 }}>
                 <Suspense fallback={<Loading></Loading>}>
-                  <OrbitControls autoRotate={true} autoRotateSpeed={5} />
                   <ambientLight intensity={theme === "dark" ? 1 : 0.5}>
                     <Center>
                       <Ibm></Ibm>

@@ -64,7 +64,7 @@ export const Contact = forwardRef<HTMLElement>(function Contact(props, ref) {
       <div className="h-[45vh] w-[100%] sm:h-[60vh] lg:w-[40vw] xl:w-[40vw]">
         <Canvas camera={{ fov: 90, zoom: 1, near: 0.1, far: 1000 }}>
           <Suspense fallback={<Loading></Loading>}>
-            <OrbitControls autoRotate={true} autoRotateSpeed={1} />
+            <OrbitControls autoRotate={true} autoRotateSpeed={0.5} enabled={false} />
             <ambientLight intensity={theme === "dark" ? 1 : 0.5}>
               <Center>
                 <Bocchi></Bocchi>
