@@ -20,7 +20,7 @@ export const Intro = forwardRef<HTMLDivElement>(function Intro(props, ref) {
       >
         <div className="h-[25vh] w-[99vw] sm:h-[50vh] sm:w-[80vw] lg:h-[60vh] lg:w-[50vw]">
           <Canvas camera={{ fov: 3.5, zoom: 1, near: 0.1, far: 1000}} frameloop={"demand"} dpr={dpr}>
-            <PerformanceMonitor onIncline={() => setDpr(1)} onDecline={() => setDpr(0.5)}></PerformanceMonitor>
+            <PerformanceMonitor onIncline={() => setDpr(0.75)} onDecline={() => setDpr(0.5)}></PerformanceMonitor>
             <Suspense fallback={<Loading />}>
               <OrbitControls autoRotate={true} autoRotateSpeed={0.5} enableZoom={false} enableDamping={false} enablePan={false} />
               <ambientLight intensity={theme === "dark" ? 1 : 0.5}>
