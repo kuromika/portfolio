@@ -32,6 +32,7 @@ export const Project = (props: ProjectProps) => {
         <p className="text-base md:text-lg md:font-light">{props.stack}</p>
         <div className="flex gap-10">
           <a
+          aria-describedby="new-window-0"
             target="_blank"
             rel="noreferrer"
             className={clsx(
@@ -42,9 +43,9 @@ export const Project = (props: ProjectProps) => {
             href={props.live}
           >
             Live <span aria-hidden={true}>→</span>
-            <span className="sr-only">opens a new window</span>
           </a>
           <a
+          aria-describedby="new-window-0"
             target="_blank"
             rel="noreferrer"
             className={clsx(
@@ -55,7 +56,6 @@ export const Project = (props: ProjectProps) => {
             href={props.repo}
           >
             Repo <span aria-hidden={true}>→</span>{" "}
-            <span className="sr-only">opens a new window</span>
           </a>
         </div>
       </div>
