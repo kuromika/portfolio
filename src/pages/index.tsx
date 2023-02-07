@@ -22,11 +22,10 @@ export default function Home() {
         })}
       >
         <header
-          className={clsx("fixed top-0  w-screen z-10 bg-white/70", {
+          className={clsx("fixed top-0  z-10 w-screen bg-white/70", {
             "bg-black/70": theme === "dark",
           })}
         >
-
           <Navigation
             intro={intro}
             about={about}
@@ -35,7 +34,6 @@ export default function Home() {
           ></Navigation>
 
           <SwitchTheme setTheme={setTheme}></SwitchTheme>
-
         </header>
         <main className="h-screen snap-y snap-mandatory scroll-p-10 overflow-y-auto scroll-smooth sm:scroll-p-0">
           <Intro ref={intro}></Intro>
