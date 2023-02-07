@@ -15,7 +15,7 @@ export const Intro = forwardRef<HTMLDivElement>(function Intro(props, ref) {
     <DivInview>
       <div
         id="intro"
-        className="flex h-screen snap-start snap-always flex-col items-center justify-center gap-5"
+        className="flex h-screen snap-start snap-always flex-col items-center justify-center gap-5 p-5 pr-5"
         ref={ref}
       >
         <div className="h-[25vh] w-[99vw] sm:h-[50vh] sm:w-[80vw] lg:h-[60vh] lg:w-[50vw]">

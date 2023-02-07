@@ -29,8 +29,7 @@ export const Name = () => {
 
   return (
     <h1 className="text-center text-2xl font-bold uppercase sm:text-left sm:text-3xl md:text-4xl lg:text-5xl">
-      <span aria-hidden="true">{name}</span>
-      <span className="sr-only">Jean Alvarez</span>
+      <span aria-hidden="true" aria-label="Jean Alvarez">{name}</span>
       <span className="mt-3 block sm:ml-20">full-stack developer</span>
     </h1>
   );

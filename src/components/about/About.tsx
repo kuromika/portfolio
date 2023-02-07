@@ -28,14 +28,14 @@ export const About = forwardRef<HTMLElement>(function About(props, ref) {
             >
               About me
             </h2>
-            <p className="md:mt-10">
+            <p className="md:mt-10 font-light">
               My name is Jean, also known as Kuromika on social media. I’m a
               highly driven self-taught web developer. I have honed my skills
               through extensive experimentation and hands-on projects, and I am
               constantly seeking out new challenges and opportunities to improve
               my craft.
             </p>{" "}
-            <p className="mt-3 sm:mt-5">
+            <p className="mt-3 sm:mt-5 font-light">
               {" "}
               When I am not coding, I like to immerse myself in the world of
               math rock and shoegaze, drawing inspiration from their complex
@@ -57,22 +57,22 @@ export const About = forwardRef<HTMLElement>(function About(props, ref) {
               </Canvas>
             </div>
             <div className="flex justify-around md:w-[100%] md:flex-col md:items-center md:gap-10 lg:flex-row lg:items-start lg:justify-around ">
-              <div className="flex flex-col">
+              <div className="flex flex-col gap-3">
                 <h3 className="text-base font-bold uppercase sm:text-xl">
                   Front-end
                 </h3>
-                <ul className="flex flex-col gap-1">
+                <ul className="flex flex-col gap-1 font-light">
                   <li>React</li>
                   <li>TypeScript</li>
                   <li>Tailwind</li>
                   <li>Next.js</li>
                 </ul>
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-3">
                 <h3 className="text-base font-bold uppercase sm:text-xl">
                   Back-end
                 </h3>
-                <ul className="flex flex-col gap-1">
+                <ul className="flex flex-col gap-1 font-light">
                   <li>Express</li>
                   <li>MongoDB</li>
                   <li>Firebase</li>
