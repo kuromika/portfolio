@@ -23,13 +23,15 @@ export default function Home() {
         <link href="/cat.ico" rel="shortcut icon"></link>
         <meta property="og:title" content="Kuromika Portfolio" key="title" />
         <meta lang="en"/>
-        <meta name="description" content="Kuromika's Portfolio"/>
+        <meta name="description" content="Kuromika - Full-Stack Developer"/>
         <meta name="author" content="Jean Alvarez"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta
           property="og:image"
-          content="/ogimage.jpg"
+          content="/ogimage2.jpg"
         />
+        <meta property="og:description" content="Kuromika - Full-Stack Developer" />
+
       </Head>
       <div
         className={clsx("section-white overflow-y-auto text-black", {
