@@ -44,7 +44,7 @@ export const About = forwardRef<HTMLElement>(function About(props, ref) {
           </div>
           <div className="mt-5 flex flex-col sm:mt-0 sm:justify-center md:w-[50%] ">
             <div className="h-[30vw] w-[100%] sm:h-[30vh] lg:h-[40vh] lg:w-[40vw] xl:w-[40vw]">
-              <Canvas camera={{ fov: 30, zoom: 1, near: 0.1, far: 1000}} frameloop={'demand'}>
+              <Canvas camera={{ fov: 30, zoom: 1, near: 0.1, far: 1000}} frameloop={'demand'} dpr={dpr}>
                 <PerformanceMonitor onIncline={() => setDpr(0.75)} onDecline={() => setDpr(0.5)}></PerformanceMonitor>
                 <Suspense fallback={<Loading></Loading>}>
                   <OrbitControls autoRotate={true} rotateSpeed={3} enableZoom={false} enableDamping={false} enablePan={false}/>
