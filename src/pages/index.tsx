@@ -28,7 +28,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta
           property="og:image"
-          content="/ogimage2.jpg"
+          content="https://kuromika.vercel.app/ogimage2.jpg"
         />
         <meta property="og:url" content="https://kuromika.vercel.app/" />
         <meta property="og:description" content="Kuromika - Full-Stack Developer" />
