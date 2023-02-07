@@ -23,7 +23,7 @@ export const Projects = forwardRef<HTMLElement>(function Projects(props, ref) {
             Projects
           </h2>
           <Project
-            title="Kumodoro"
+            title="Kurodoro"
             description="A customizable pomodoro timer that works on desktop & mobile
                 browsers. The aim of this app is to help you focus on any task you
                 are working on, such as study, writing, or coding. This app is
