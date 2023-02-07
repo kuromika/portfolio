@@ -30,7 +30,13 @@ export default function Home() {
           property="og:image"
           content="/ogimage2.jpg"
         />
+        <meta property="og:url" content="https://kuromika.vercel.app/" />
         <meta property="og:description" content="Kuromika - Full-Stack Developer" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@Kuromika__" />
+        <meta name="twitter:title" content="Kuromika Portfolio" />
+        <meta name="twitter:description" content="Kuromika - Full-Stack Developer"/>
+        <meta name="twitter:image" content="/ogimage2.jpg"/>
 
       </Head>
       <div
