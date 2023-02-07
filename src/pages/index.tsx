@@ -31,7 +31,7 @@ export default function Home() {
             intro={intro}
             about={about}
             projects={projects}
-            contact = {contact}
+            contact={contact}
             setTheme={setTheme}
           ></Navigation>
 

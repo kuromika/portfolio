@@ -21,8 +21,8 @@ export const About = forwardRef<HTMLElement>(function About(props, ref) {
           <div className="flex flex-col items-center justify-center md:w-[50%]">
             <h2
               className={clsx(
-                "mb-5 self-start text-xl font-semibold md:text-4xl xl:text-5xl lg:pb-5 border-b-black border-b-2 w-[100%]",
-                {'border-b-white': theme === 'dark'}
+                "mb-5 w-[100%] self-start border-b-2 border-b-black text-xl font-semibold md:text-4xl lg:pb-5 xl:text-5xl",
+                { "border-b-white": theme === "dark" }
               )}
             >
               About me

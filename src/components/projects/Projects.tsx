@@ -4,10 +4,7 @@ import clsx from "clsx";
 import { ThemeContext } from "@/lib/context/ThemeContext";
 import { Project } from "./Project";
 
-export const Projects = forwardRef<HTMLElement>(function Projects(
-  props,
-  ref
-) {
+export const Projects = forwardRef<HTMLElement>(function Projects(props, ref) {
   const theme = useContext(ThemeContext);
 
   return (
@@ -19,8 +16,8 @@ export const Projects = forwardRef<HTMLElement>(function Projects(
         <div className="flex w-[100%] flex-col md:w-[90%] lg:w-[80%] ">
           <h2
             className={clsx(
-              "mb-5 text-xl font-semibold md:text-4xl xl:text-5xl lg:pb-5 border-b-black border-b-2 ",
-              {'border-b-white': theme === 'dark'}
+              "mb-5 border-b-2 border-b-black text-xl font-semibold md:text-4xl lg:pb-5 xl:text-5xl ",
+              { "border-b-white": theme === "dark" }
             )}
           >
             Projects
