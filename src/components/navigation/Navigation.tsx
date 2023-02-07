@@ -24,6 +24,7 @@ export const Navigation = (props: NavigationProps): JSX.Element => {
   const scrollTo = (ref: RefObject<HTMLDivElement | HTMLElement>) => {
     return function scroll() {
       ref.current?.scrollIntoView({ block: "start" });
+      handleMenuClick();
     };
   };
 
