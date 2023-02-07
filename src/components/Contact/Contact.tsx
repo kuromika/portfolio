@@ -34,7 +34,7 @@ export const Contact = forwardRef<HTMLElement>(function Contact(props, ref) {
               rel="noreferrer"
               aria-describedby="new-window-1"
             >
-              <span aria-hidden={true}>↗</span> Kuromika.dev@gmail.com
+              <span aria-hidden={true} className='font-bold sm:text-lg'>↗</span> Kuromika.dev@gmail.com
             </a>
           </div>
           <div className="flex flex-col items-center gap-5">
@@ -47,7 +47,7 @@ export const Contact = forwardRef<HTMLElement>(function Contact(props, ref) {
                 rel="noreferrer"
                 aria-describedby="new-window-0"
               >
-                <span aria-hidden={true}>↗</span> Github{" "}
+                <span aria-hidden={true} className='font-bold sm:text-lg'>↗</span> Github{" "}
               </a>
               <a
                 className="ease-in-linear border-b-[#ff4637] text-sm font-medium uppercase text-[#ff4637] transition-[border-width] duration-100 hover:border-b-4 sm:text-lg"
@@ -56,7 +56,7 @@ export const Contact = forwardRef<HTMLElement>(function Contact(props, ref) {
                 rel="noreferrer"
                 aria-describedby="new-window-0"
               >
-                <span aria-hidden={true}>↗</span> Twitter
+                <span aria-hidden={true} className='font-bold sm:text-lg'>↗</span> Twitter
               </a>
             </div>
           </div>
