@@ -26,6 +26,10 @@ export default function Home() {
         <meta name="description" content="Kuromika's Portfolio"/>
         <meta name="author" content="Jean Alvarez"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta
+          property="og:image"
+          content="/ogimage.jpg"
+        />
       </Head>
       <div
         className={clsx("section-white overflow-y-auto text-black", {
