@@ -1,9 +1,3 @@
-import { useEffect, useState } from "react";
-
-type LinkedName = null | {
-  name: string;
-  next: null | LinkedName;
-};
 
 export const Name = () => {
 

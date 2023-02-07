@@ -67,12 +67,12 @@ export const Contact = forwardRef<HTMLElement>(function Contact(props, ref) {
         </div>
         <div className="h-[35vh] w-[100%] sm:h-[60vh] lg:w-[40vw] xl:w-[40vw] p-10">
           <Canvas camera={{ fov: 90, zoom: 1, near: 0.1, far: 1000 }}  dpr={dpr}>
-            <PerformanceMonitor onDecline={() => setDpr(0.5)}></PerformanceMonitor>
+            <PerformanceMonitor onDecline={() => setDpr(0.4)}></PerformanceMonitor>
             <Suspense fallback={<Loading></Loading>}>
               <ambientLight intensity={theme === "dark" ? 1 : 0.5}>
                 <Center>
                   <NoSSR>
-                    <PrimitiveModel model='/bocchi_rubbish_bin-transformed.glb' scale={[0.5,0.5,0.5]} rotation={0.01}></PrimitiveModel>
+                    <PrimitiveModel model='/bocchi_rubbish_bin-transformed.glb' scale={[0.5,0.5,0.5]} rotation={0.02}></PrimitiveModel>
                   </NoSSR>
                 </Center>
               </ambientLight>
