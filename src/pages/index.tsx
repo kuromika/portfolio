@@ -20,7 +20,7 @@ export default function Home() {
     <ThemeContext.Provider value={theme}>
       <Head>
         <title>Kuromika - Portfolio</title>
-        <link href="/cat.ico" rel="shortcut icon"></link>
+        <link href="/sailor.ico" rel="shortcut icon"></link>
         <meta property="og:title" content="Kuromika Portfolio" key="title" />
         <meta lang="en"/>
         <meta name="description" content="Kuromika - Full-Stack Developer"/>

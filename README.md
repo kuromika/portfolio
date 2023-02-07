@@ -6,7 +6,7 @@
 
 ## Bocchi by: [chibi chan](https://sketchfab.com/3d-models/bocchi-rubbish-bin-1bec59896aa64fdda06b2ad425e164ed) on Sketchfab
 
-## Cat Icon by: [Smashicons](https://www.flaticon.com/free-icon/cat_3529321) on flaticon
+## Icon by: [Victoruler](https://www.flaticon.com/free-icon/sailor_1993167) on Flaticon
 
 
 ## Getting Started
