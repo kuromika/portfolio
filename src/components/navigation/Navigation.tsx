@@ -49,7 +49,7 @@ export const Navigation = (props: NavigationProps): JSX.Element => {
   );
 
   return (
-    <nav className="pl-5 sm:pl-10 sm:pr-10 max-w-[1920px]">
+    <nav className="pl-5 sm:pl-10 sm:pr-10">
       {windowDimensions.width! < 640 ? (
         <>
           <button

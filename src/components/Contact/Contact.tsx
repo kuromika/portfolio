@@ -16,7 +16,7 @@ export const Contact = forwardRef<HTMLElement>(function Contact(props, ref) {
     <DivInview>
       <section
         ref={ref}
-        className="mt-10 flex min-h-screen snap-start snap-always flex-col items-center justify-center pt-5 pl-5 pr-5 pb-5 sm:pt-24 sm:pb-24 max-w-[1920px]"
+        className="mt-10 flex min-h-screen snap-start snap-always flex-col items-center justify-center pt-5 pl-5 pr-5 pb-5 sm:pt-24 sm:pb-24"
       >
         <div className="flex w-[100%] flex-col md:w-[90%] lg:w-[80%]">
           <h2
@@ -72,7 +72,7 @@ export const Contact = forwardRef<HTMLElement>(function Contact(props, ref) {
               <ambientLight intensity={theme === "dark" ? 1 : 0.5}>
                 <Center>
                   <NoSSR>
-                    <PrimitiveModel model='/bocchi_rubbish_bin-transformed.glb' scale={[0.5,0.5,0.5]} rotation={0.02}></PrimitiveModel>
+                    <PrimitiveModel model='/bocchi_rubbish_bin-transformed.glb' scale={[0.5,0.5,0.5]} rotation={0.001}></PrimitiveModel>
                   </NoSSR>
                 </Center>
               </ambientLight>
