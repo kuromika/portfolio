@@ -30,12 +30,33 @@ export const Projects = forwardRef<HTMLDivElement>(function Projects(
                 browsers. The aim of this app is to help you focus on any task you
                 are working on, such as study, writing, or coding. This app is
                 inspired by Pomodoro Technique."
-              stack="Built using TypeScript, React, Next.js, Tailwind CSS and Firebase."
+              stack="Built with TypeScript, React, Next.js, Tailwind CSS and Firebase."
               alt="A demonstration of the Pomodoro timer"
             src="/kurodoro.gif"
             repo='https://github.com/kuromika/kurodoro'
             live='https://kurodoro.vercel.app/'
-            ></Project>
+            static="/static-kuro.png"
+          ></Project>
+          <Project
+            title="Where is Nostalgia"
+            description="A fun and interactive web app that simulates the classic puzzle book game"
+            stack="Built with React, JavaScript, CSS, Firebase and react-router"
+            alt="A demonstration of a webpage similar to the where is waldo game"
+            src='/waldo.gif'
+            repo='https://github.com/kuromika/where-is-nostalgia'
+            live='https://where-is-nostalgia.web.app/'
+            static='/static-waldo.png'
+          ></Project>
+          <Project
+            title="Memory Card"
+            description="A fun and challenging web game inspired by the popular VA-11 HALL-A visual novel. In this game, players are transported to the dystopian world of the VA-11 HALL-A bar, where they must test their memory and recall skills by clicking iconic characters only once"
+            stack="Built with React, JavaScript and CSS"
+            alt="A demonstration of a web game where players can click on a same card twice"
+            src='/memory.gif'
+            static='/static-memory.png'
+            live='https://kuromika.github.io/memory-card/'
+            repo='https://github.com/kuromika/memory-card'
+          ></Project>
         </div>
       </section>
     </DivInview>
