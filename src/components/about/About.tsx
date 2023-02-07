@@ -51,7 +51,7 @@ export const About = forwardRef<HTMLElement>(function About(props, ref) {
                   <ambientLight intensity={theme === "dark" ? 1 : 0.5}>
                     <Center>
                       <NoSSR>
-                      <PrimitiveModel scale={[0.1,0.1,0.1]} model='/ibm_5110-transformed.glb' rotation={0.006}></PrimitiveModel>
+                      <PrimitiveModel scale={[0.1,0.1,0.1]} model='/ibm_5110-transformed.glb' rotation={-0.01}></PrimitiveModel>
                       </NoSSR>
                     </Center>
                   </ambientLight>
