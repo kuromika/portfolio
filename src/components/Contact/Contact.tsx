@@ -1,11 +1,11 @@
 import { ThemeContext } from "@/lib/context/ThemeContext";
-import { Center, OrbitControls, PerformanceMonitor } from "@react-three/drei";
+import { Center, PerformanceMonitor } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import clsx from "clsx";
 import { forwardRef, Suspense, useContext, useState } from "react";
-import { Bocchi } from "../3d/Bocchi";
 import { NoSSR } from "../3d/Dynamic";
 import { Loading } from "../3d/Loading";
+import { PrimitiveModel } from "../3d/PrimitiveModel";
 import { DivInview } from "../animations/DivInview";
 
 export const Contact = forwardRef<HTMLElement>(function Contact(props, ref) {
@@ -69,11 +69,10 @@ export const Contact = forwardRef<HTMLElement>(function Contact(props, ref) {
           <Canvas camera={{ fov: 90, zoom: 1, near: 0.1, far: 1000 }}  dpr={dpr}>
             <PerformanceMonitor onDecline={() => setDpr(0.5)}></PerformanceMonitor>
             <Suspense fallback={<Loading></Loading>}>
-              <OrbitControls autoRotate={true} autoRotateSpeed={1} enableZoom={false} enableDamping={false} enablePan={false}/>
               <ambientLight intensity={theme === "dark" ? 1 : 0.5}>
                 <Center>
                   <NoSSR>
-                    <Bocchi></Bocchi>
+                    <PrimitiveModel model='/bocchi_rubbish_bin-transformed.glb' scale={[0.5,0.5,0.5]} rotation={0.01}></PrimitiveModel>
                   </NoSSR>
                 </Center>
               </ambientLight>

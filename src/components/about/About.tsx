@@ -1,11 +1,11 @@
 import { ThemeContext } from "@/lib/context/ThemeContext";
-import { Center, OrbitControls, PerformanceMonitor } from "@react-three/drei";
+import { Center, PerformanceMonitor } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import clsx from "clsx";
 import { forwardRef, Suspense, useContext, useState } from "react";
 import { NoSSR } from "../3d/Dynamic";
-import { Ibm } from "../3d/Ibm";
 import { Loading } from "../3d/Loading";
+import { PrimitiveModel } from "../3d/PrimitiveModel";
 import { DivInview } from "../animations/DivInview";
 
 export const About = forwardRef<HTMLElement>(function About(props, ref) {
@@ -17,7 +17,7 @@ export const About = forwardRef<HTMLElement>(function About(props, ref) {
       <section
         ref={ref}
         id="about"
-        className="flex min-h-screen snap-start snap-always flex-col items-center pt-10 pl-5 pr-5  sm:justify-center sm:pt-0 pb-28"
+        className="flex min-h-screen snap-start snap-always flex-col items-center pt-10 pl-5 pr-5  sm:justify-center mb-28"
       >
         <div className="flex flex-col justify-between sm:gap-10 md:w-[90%] md:flex-row md:text-xl lg:w-[80%]">
           <div className="flex flex-col items-center justify-center md:w-[50%]">
@@ -45,14 +45,13 @@ export const About = forwardRef<HTMLElement>(function About(props, ref) {
           </div>
           <div className="mt-5 flex flex-col sm:mt-0 sm:justify-center md:w-[50%] ">
             <div className="h-[30vw] w-[100%] sm:h-[30vh] lg:h-[40vh] lg:w-[40vw] xl:w-[40vw]">
-              <Canvas camera={{ fov: 30, zoom: 1, near: 0.1, far: 1000}} dpr={dpr}>
+              <Canvas camera={{ fov: 40, zoom: 1, near: 0.1, far: 1000}} dpr={dpr}>
                 <PerformanceMonitor  onDecline={() => setDpr(0.5)}></PerformanceMonitor>
                 <Suspense fallback={<Loading></Loading>}>
-                  <OrbitControls autoRotate={true} rotateSpeed={3} enableZoom={false} enableDamping={false} enablePan={false}/>
                   <ambientLight intensity={theme === "dark" ? 1 : 0.5}>
                     <Center>
                       <NoSSR>
-                        <Ibm></Ibm>
+                      <PrimitiveModel scale={[0.1,0.1,0.1]} model='/ibm_5110-transformed.glb' rotation={0.006}></PrimitiveModel>
                       </NoSSR>
                     </Center>
                   </ambientLight>
