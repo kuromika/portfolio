@@ -1,4 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Credits
+
+## Divergence Meter by:  [Amatsukast](https://sketchfab.com/3d-models/divergence-meter-steinsgate-b43abf482d30435fa0683b765deee31b) on Sketchfab
+
+## IBM 5110 by: [maxdragonn](https://sketchfab.com/3d-models/ibm-5110-8209aa20bc634f5cbed6055586bde33d) on Sketchfab
+
+## Bocchi by: [chibi chan](https://sketchfab.com/3d-models/bocchi-rubbish-bin-1bec59896aa64fdda06b2ad425e164ed) on Sketchfab
+
+## Cat Icon by: [Smashicons](https://www.flaticon.com/free-icon/cat_3529321) on flaticon
+
 
 ## Getting Started
 
