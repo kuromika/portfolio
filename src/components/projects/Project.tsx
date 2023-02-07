@@ -25,11 +25,11 @@ export const Project = (props: ProjectProps) => {
   useEffect(() => {
     if (window) {
       if (checkMobile()) {
-        setImage(props.src);
+        setImage(props.static);
       }
     }
   }, [props]);
-
+  
   const handleMouseEnter = () => {
     setImage(props.src);
   };
