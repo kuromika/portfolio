@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { ThemeContext } from "@/lib/context/ThemeContext";
 import { Project } from "./Project";
 
-export const Projects = forwardRef<HTMLDivElement>(function Projects(
+export const Projects = forwardRef<HTMLElement>(function Projects(
   props,
   ref
 ) {
@@ -14,15 +14,13 @@ export const Projects = forwardRef<HTMLDivElement>(function Projects(
     <DivInview>
       <section
         ref={ref}
-        className="mt-10 flex min-h-screen snap-start snap-always flex-col items-center pt-5 pl-5 pr-5 pb-5 md:pt-24 md:pb-24"
+        className="mt-10 flex min-h-screen snap-start snap-always flex-col items-center pt-5 pl-5 pr-5 pb-5 sm:pt-24 sm:pb-56 lg:pb-96"
       >
         <div className="flex w-[100%] flex-col md:w-[90%] lg:w-[80%] ">
           <h2
             className={clsx(
-              "mb-5 text-xl font-semibold after:block after:h-1 after:w-10 after:bg-black/70 after:content-[''] md:mb-10 md:text-4xl",
-              {
-                "after:bg-white/70": theme === "dark",
-              }
+              "mb-5 text-xl font-semibold md:text-4xl xl:text-5xl lg:pb-5 border-b-black border-b-2 ",
+              {'border-b-white': theme === 'dark'}
             )}
           >
             Projects

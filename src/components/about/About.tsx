@@ -21,11 +21,11 @@ export const About = forwardRef<HTMLElement>(function About(props, ref) {
           <div className="flex flex-col items-center justify-center md:w-[50%]">
             <h2
               className={clsx(
-                "mb-5 self-start text-xl font-semibold after:block after:h-1 after:w-10 after:bg-black/70 after:content-[''] md:text-4xl",
-                { "after:bg-white/70": theme === "dark" }
+                "mb-5 self-start text-xl font-semibold md:text-4xl xl:text-5xl lg:pb-5 border-b-black border-b-2 w-[100%]",
+                {'border-b-white': theme === 'dark'}
               )}
             >
-              About me:
+              About me
             </h2>
             <p className="md:mt-10">
               My name is Jean, also known as Kuromika on social media. I’m a
@@ -45,7 +45,7 @@ export const About = forwardRef<HTMLElement>(function About(props, ref) {
             <div className="h-[30vw] w-[100%] sm:h-[30vh] lg:h-[40vh] lg:w-[40vw] xl:w-[40vw]">
               <Canvas camera={{ fov: 40, zoom: 1, near: 0.1, far: 1000 }}>
                 <Suspense fallback={<Loading></Loading>}>
-                  <OrbitControls autoRotate={true} autoRotateSpeed={10} />
+                  <OrbitControls autoRotate={true} autoRotateSpeed={5} />
                   <ambientLight intensity={theme === "dark" ? 1 : 0.5}>
                     <Center>
                       <Ibm></Ibm>

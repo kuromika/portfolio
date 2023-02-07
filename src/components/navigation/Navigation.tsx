@@ -9,7 +9,7 @@ type NavigationProps = {
   intro: RefObject<HTMLDivElement>;
   about: RefObject<HTMLElement>;
   projects: RefObject<HTMLDivElement>;
-
+  contact: RefObject<HTMLDivElement>;
   setTheme: (mode: ThemeType) => void;
 };
 
@@ -30,6 +30,7 @@ export const Navigation = (props: NavigationProps): JSX.Element => {
   const scrollToIntro = scrollTo(props.intro);
   const scrollToAbout = scrollTo(props.about);
   const scrollToProjects = scrollTo(props.projects);
+  const scrollToContact = scrollTo(props.contact)
 
   useEffect(() => {
     if (windowDimensions !== undefined) {
@@ -42,6 +43,7 @@ export const Navigation = (props: NavigationProps): JSX.Element => {
       intro={scrollToIntro}
       about={scrollToAbout}
       projects={scrollToProjects}
+      contact={scrollToContact}
     ></Anchors>
   );
 

@@ -8,6 +8,7 @@ type AnchorsProps = {
   intro: () => void;
   about: () => void;
   projects: () => void;
+  contact: () => void;
 };
 
 export const Anchors = (props: AnchorsProps) => {
@@ -30,7 +31,7 @@ export const Anchors = (props: AnchorsProps) => {
         <div className="items-center sm:ml-auto sm:mr-5 sm:flex">
           <NavAnchor onclick={props.about} text="About me"></NavAnchor>
           <NavAnchor onclick={props.projects} text="Projects"></NavAnchor>
-          <NavAnchor text="Contact"></NavAnchor>
+          <NavAnchor onclick={props.contact} text="Contact"></NavAnchor>
         </div>
       </ul>
     </motion.div>

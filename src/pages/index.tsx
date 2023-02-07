@@ -6,6 +6,7 @@ import { createRef, useState } from "react";
 import clsx from "clsx";
 import { SwitchTheme } from "@/components/theme/SwitchTheme";
 import { Projects } from "@/components/projects/Projects";
+import { Contact } from "@/components/Contact/Contact";
 
 export default function Home() {
   const [theme, setTheme] = useState<ThemeType>("dark");
@@ -30,15 +31,21 @@ export default function Home() {
             intro={intro}
             about={about}
             projects={projects}
+            contact = {contact}
             setTheme={setTheme}
           ></Navigation>
 
           <SwitchTheme setTheme={setTheme}></SwitchTheme>
         </header>
         <main className="h-screen snap-y snap-mandatory scroll-p-10 overflow-y-auto scroll-smooth sm:scroll-p-0">
+          <div hidden>
+            <span id="new-window-0">Opens in a new window</span>
+            <span id="new-window-1">Opens send email application</span>
+          </div>
           <Intro ref={intro}></Intro>
           <About ref={about}></About>
           <Projects ref={projects}></Projects>
+          <Contact ref={contact}></Contact>
         </main>
       </div>
     </ThemeContext.Provider>

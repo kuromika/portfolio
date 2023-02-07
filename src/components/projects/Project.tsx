@@ -43,16 +43,15 @@ export const Project = (props: ProjectProps) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className={clsx(
-        "project flex flex-col items-center gap-5 border-b-2 border-b-white/30  p-5 first-of-type:border-t-2 first-of-type:border-t-white/30 hover:text-[#ff4637] md:flex-row md:justify-center md:gap-10",
-        { "first-of-type:border-t-black/30": theme === "light" },
+        "project flex flex-col items-center gap-5 border-b-2 border-b-white/30  p-5  hover:text-[#ff4637] md:flex-row md:justify-center md:gap-10",
         { "border-b-black/30": theme === "light" },
         { "hover:text-red-900": theme === "light" }
       )}
     >
       <div className="flex flex-col justify-around gap-5 md:w-[60%]">
         <h3 className="font-bold md:text-2xl ">{props.title}</h3>
-        <p className="text-base md:text-lg">{props.description}</p>
-        <p className="text-base md:text-lg">{props.stack}</p>
+        <p className="text-base md:text-lg md:font-light">{props.description}</p>
+        <p className="text-base md:text-lg md:font-light">{props.stack}</p>
         <div className="flex gap-10">
           <a
             target="_blank"
@@ -64,7 +63,7 @@ export const Project = (props: ProjectProps) => {
             )}
             href={props.live}
           >
-            Live → <span className="sr-only">opens a new window</span>
+            Live <span aria-hidden={true}>→</span><span className="sr-only">opens a new window</span>
           </a>
           <a
             target="_blank"
@@ -76,12 +75,12 @@ export const Project = (props: ProjectProps) => {
             )}
             href={props.repo}
           >
-            Repo → <span className="sr-only">opens a new window</span>
+            Repo <span aria-hidden={true}>→</span> <span className="sr-only">opens a new window</span>
           </a>
         </div>
       </div>
       <div className="relative z-[2] h-[20vh] w-[90%] sm:h-[30vh] lg:w-[40%]">
-        <Image fill src={image} alt={props.alt}></Image>
+        <Image fill  src={image} alt={props.alt} sizes={"100%"}></Image>
       </div>
     </div>
   );
