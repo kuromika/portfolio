@@ -3,6 +3,7 @@ import { Center, OrbitControls, PerformanceMonitor } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import clsx from "clsx";
 import { forwardRef, Suspense, useContext, useState } from "react";
+import { NoSSR } from "../3d/Dynamic";
 import { Ibm } from "../3d/Ibm";
 import { Loading } from "../3d/Loading";
 import { DivInview } from "../animations/DivInview";
@@ -44,13 +45,15 @@ export const About = forwardRef<HTMLElement>(function About(props, ref) {
           </div>
           <div className="mt-5 flex flex-col sm:mt-0 sm:justify-center md:w-[50%] ">
             <div className="h-[30vw] w-[100%] sm:h-[30vh] lg:h-[40vh] lg:w-[40vw] xl:w-[40vw]">
-              <Canvas camera={{ fov: 30, zoom: 1, near: 0.1, far: 1000}} frameloop={'demand'} dpr={dpr}>
-                <PerformanceMonitor onIncline={() => setDpr(0.75)} onDecline={() => setDpr(0.5)}></PerformanceMonitor>
+              <Canvas camera={{ fov: 30, zoom: 1, near: 0.1, far: 1000}} dpr={dpr}>
+                <PerformanceMonitor  onDecline={() => setDpr(0.5)}></PerformanceMonitor>
                 <Suspense fallback={<Loading></Loading>}>
                   <OrbitControls autoRotate={true} rotateSpeed={3} enableZoom={false} enableDamping={false} enablePan={false}/>
                   <ambientLight intensity={theme === "dark" ? 1 : 0.5}>
                     <Center>
-                      <Ibm></Ibm>
+                      <NoSSR>
+                        <Ibm></Ibm>
+                      </NoSSR>
                     </Center>
                   </ambientLight>
                 </Suspense>

@@ -4,6 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import clsx from "clsx";
 import { forwardRef, Suspense, useContext, useState } from "react";
 import { Bocchi } from "../3d/Bocchi";
+import { NoSSR } from "../3d/Dynamic";
 import { Loading } from "../3d/Loading";
 import { DivInview } from "../animations/DivInview";
 
@@ -65,13 +66,15 @@ export const Contact = forwardRef<HTMLElement>(function Contact(props, ref) {
           </div>
         </div>
         <div className="h-[45vh] w-[100%] sm:h-[60vh] lg:w-[40vw] xl:w-[40vw]">
-          <Canvas camera={{ fov: 90, zoom: 1, near: 0.1, far: 1000 }} frameloop={'demand'} dpr={dpr}>
-            <PerformanceMonitor onIncline={() => setDpr(0.75)} onDecline={() => setDpr(0.5)}></PerformanceMonitor>
+          <Canvas camera={{ fov: 90, zoom: 1, near: 0.1, far: 1000 }}  dpr={dpr}>
+            <PerformanceMonitor onDecline={() => setDpr(0.5)}></PerformanceMonitor>
             <Suspense fallback={<Loading></Loading>}>
               <OrbitControls autoRotate={true} autoRotateSpeed={1} enableZoom={false} enableDamping={false} enablePan={false}/>
               <ambientLight intensity={theme === "dark" ? 1 : 0.5}>
                 <Center>
-                  <Bocchi></Bocchi>
+                  <NoSSR>
+                    <Bocchi></Bocchi>
+                  </NoSSR>
                 </Center>
               </ambientLight>
             </Suspense>

@@ -1,7 +1,7 @@
 import { ThemeContext } from "@/lib/context/ThemeContext";
 import clsx from "clsx";
 import Image from "next/image";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 
 export type ProjectProps = {
   title: string;

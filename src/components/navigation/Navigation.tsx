@@ -1,7 +1,7 @@
 import { useWindowDimensions } from "@/lib/hooks/useWindowDimensions";
 import { mdiMenu } from "@mdi/js";
 import Icon from "@mdi/react";
-import { RefObject, useContext, useEffect, useState } from "react";
+import { RefObject, useEffect, useState } from "react";
 import { ThemeType } from "@/lib/context/ThemeContext";
 import { Anchors } from "./Anchors";
 
