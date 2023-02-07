@@ -11,7 +11,7 @@ export const Projects = forwardRef<HTMLElement>(function Projects(props, ref) {
     <DivInview>
       <section
         ref={ref}
-        className="mt-10 flex min-h-screen snap-start snap-always flex-col items-center pt-5 pl-5 pr-5 pb-5 sm:pt-24 sm:pb-56 lg:pb-96"
+        className="mt-10 flex min-h-screen snap-start snap-always flex-col items-center pt-5 pl-5 pr-5 sm:pt-24 pb-28 sm:pb-56 lg:pb-96"
       >
         <div className="flex w-[100%] flex-col md:w-[90%] lg:w-[80%] ">
           <h2
