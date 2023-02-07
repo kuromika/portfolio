@@ -18,7 +18,7 @@ export const Anchors = (props: AnchorsProps) => {
     <motion.div
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
-      transition={{ duration: 1, ease: "linear" }}
+      transition={{ duration: 0.5, ease: "linear" }}
     >
       <ul
         className={clsx(

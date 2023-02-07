@@ -26,7 +26,7 @@ export const Project = (props: ProjectProps) => {
     >
       <div className="flex flex-col justify-around gap-5 md:w-[60%]">
         <h3 className="font-bold md:text-2xl ">{props.title}</h3>
-        <p className="text-base md:text-lg md:font-light">
+        <p className="text-base md:text-lg font-light">
           {props.description}
         </p>
         <p className="text-base md:text-lg md:font-light">{props.stack}</p>

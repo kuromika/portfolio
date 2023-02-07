@@ -16,7 +16,7 @@ export const Contact = forwardRef<HTMLElement>(function Contact(props, ref) {
     <DivInview>
       <section
         ref={ref}
-        className="mt-10 flex min-h-screen snap-start snap-always flex-col items-center justify-center pt-5 pl-5 pr-5 pb-5 sm:pt-24 sm:pb-24"
+        className="mt-10 flex min-h-screen snap-start snap-always flex-col items-center justify-center pt-5 pl-5 pr-5 pb-5 sm:pt-24 sm:pb-24 max-w-[1920px]"
       >
         <div className="flex w-[100%] flex-col md:w-[90%] lg:w-[80%]">
           <h2
@@ -65,7 +65,7 @@ export const Contact = forwardRef<HTMLElement>(function Contact(props, ref) {
             </div>
           </div>
         </div>
-        <div className="h-[45vh] w-[100%] sm:h-[60vh] lg:w-[40vw] xl:w-[40vw]">
+        <div className="h-[35vh] w-[100%] sm:h-[60vh] lg:w-[40vw] xl:w-[40vw] p-10">
           <Canvas camera={{ fov: 90, zoom: 1, near: 0.1, far: 1000 }}  dpr={dpr}>
             <PerformanceMonitor onDecline={() => setDpr(0.5)}></PerformanceMonitor>
             <Suspense fallback={<Loading></Loading>}>
