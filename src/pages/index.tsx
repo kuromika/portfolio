@@ -6,7 +6,7 @@ import { createRef, useState } from "react";
 import clsx from "clsx";
 import { SwitchTheme } from "@/components/theme/SwitchTheme";
 import { Projects } from "@/components/projects/Projects";
-import { Contact } from "@/components/Contact/Contact";
+import { Contact } from "@/components/contact/Contact";
 import Head from "next/head";
 
 export default function Home() {
