@@ -11,6 +11,7 @@
       "Helvetica Neue", sans-serif;
   }
 
+  
   body {
     overflow-y: hidden;
   }
@@ -29,7 +30,7 @@
     background-size: 50px 50px;
     background-image: radial-gradient(
       circle,
-      #ff4637 0.5px,
+      #A30000 0.5px,
       rgba(0, 0, 0, 1) 1px
     );
   }

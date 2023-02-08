@@ -59,7 +59,7 @@ export const Project = (props: ProjectProps) => {
           </a>
         </div>
       </div>
-      <div className="relative z-[2] h-[20vh] w-[90%] sm:h-[30vh] lg:w-[40%]">
+      <div className="relative z-[2] h-[25vh] w-[80vw] sm:w-[80%] sm:h-[30vh] lg:w-[40%]">
         <Image fill src={props.static} alt={props.alt} sizes={"100%"}></Image>
       </div>
     </div>

@@ -17,7 +17,7 @@ export const About = forwardRef<HTMLElement>(function About(props, ref) {
       <section
         ref={ref}
         id="about"
-        className="flex min-h-screen snap-start snap-always flex-col items-center pt-10 pl-5 pr-5  sm:justify-center mb-28"
+        className="flex flex-col items-center pt-10 pl-5 pr-5  sm:justify-center mb-[20vh]"
       >
         <div className="flex flex-col justify-between sm:gap-10 md:w-[90%] md:flex-row md:text-xl lg:w-[80%]">
           <div className="flex flex-col items-center justify-center md:w-[50%]">
@@ -58,7 +58,7 @@ export const About = forwardRef<HTMLElement>(function About(props, ref) {
                 </Suspense>
               </Canvas>
             </div>
-            <div className="flex justify-around md:w-[100%] md:flex-col md:items-center md:gap-10 lg:flex-row lg:items-start lg:justify-around ">
+            <div className="flex justify-around md:w-[100%] md:flex-col md:items-center md:gap-10 lg:flex-row lg:items-start lg:justify-around pt-5">
               <div className="flex flex-col gap-3">
                 <h3 className="text-base font-bold uppercase sm:text-xl">
                   Front-end

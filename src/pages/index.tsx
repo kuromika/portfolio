@@ -60,7 +60,7 @@ export default function Home() {
 
           <SwitchTheme setTheme={setTheme}></SwitchTheme>
         </header>
-        <main className="h-screen snap-y snap-mandatory scroll-p-10 overflow-y-auto scroll-smooth sm:scroll-p-0">
+        <main className="h-screen overflow-y-auto scroll-smooth scroll-p-14">
           <div hidden>
             <span id="new-window-0">Opens in a new window</span>
             <span id="new-window-1">Opens send email application</span>
