@@ -17,7 +17,7 @@ export const About = forwardRef<HTMLElement>(function About(props, ref) {
       <section
         ref={ref}
         id="about"
-        className="flex flex-col items-center pt-10 pl-5 pr-5  sm:justify-center mb-[20vh]"
+        className="flex flex-col items-center pt-10 pl-5 pr-5  sm:justify-center mb-[15vh]"
       >
         <div className="flex flex-col justify-between sm:gap-10 md:w-[90%] md:flex-row md:text-xl lg:w-[80%]">
           <div className="flex flex-col items-center justify-center md:w-[50%]">
